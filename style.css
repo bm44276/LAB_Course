@@ -1,0 +1,413 @@
+body{
+    padding:             0;
+    margin:              0;
+    background-color:  #121315; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .topNav{
+       display:            flex;
+       align-items:         center;
+       justify-content:     space-around;
+       background-color:    rgb(54, 54, 54);
+       padding:                5px;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .topNav header{
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       padding: 5px;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .topNav header .image{
+       width: 80px;
+       height: 80px;
+       padding-right: 30px;
+       margin: 0;
+       padding-top: 2px;
+       padding-bottom: 2px;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .topNav h1{
+       color: aliceblue;
+       font-size: 36px;
+       font-weight: 700;
+       font-family: monospace;
+       letter-spacing: 10px;
+       text-align: center;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .topNav form{
+       padding: 5px;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .topNav nav input[type = "email"], .topNav nav input[type = "password"]{
+       border: 3px solid  rgb(54, 54, 54);
+       border-radius: 20px;
+       padding: 7px;
+       font-size: medium;
+       margin: 5px;
+       outline: none;
+       background-color: rgb(255, 255, 255);
+       width: 220px;
+       cursor: pointer;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .topNav nav input[type ="email"]:focus,.topNav nav input[type = "password"]:focus{
+       border-color: #2ecc71;
+   
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .topNav nav input[type = "submit"]{
+       background: none;
+       text-align: center;
+       border: 2px solid #2ecc71;
+       padding: 10px;
+       width: 100px;
+       outline: none;
+       color: white;
+       border-radius: 24px;  
+       cursor: pointer;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .topNav nav input[type = "submit"]:hover{
+       border-color: #2ecc71;
+       background-color: #2ecc71;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .topNav nav input[type ="email"]::placeholder,.topNav nav input[type = "password"]::placeholder{
+      font-size: 18px;
+   }
+   
+   /*--------------------    Kqyr gjeja naj foto tmir per background image qit tani fshije fjat e qiti komenti  --------------------------------- */
+   
+   .content{
+       background-image: url(photos/Gym-Background-Final.JPG);
+       background-repeat: no-repeat;
+       background-size: cover;
+       display: grid;
+       padding: 70px 20px;
+       grid-template-columns: 1fr 1fr;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .content .title h1{
+       font-size: 80px;
+       color: aliceblue;
+       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+       text-align: center; 
+       margin-top: 260px;
+       padding-bottom: 10px;
+       word-spacing: 20px;
+       letter-spacing: 10px;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .signUpPage{
+       text-align: center;
+       padding: 30px;
+       padding-top: 70px;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .signUpPage h1{
+       font-size: 50px;
+       font-family: 'Helvetica Neue', sans-serif;
+       color: rgb(255, 232, 232);
+       font-weight: 900;
+       letter-spacing: 4px;
+       word-spacing: 7px;
+       padding: 2px;
+       padding-bottom: 20px;
+       text-align: center;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .signUpPage .firstName {
+       padding-bottom: 30px;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .signUpPage .firstName input[type = 'text'] {
+       border: 2px solid black;
+       border-radius: 40px;
+       padding: 14px;
+       font-size: medium;
+       margin: 5px;
+       outline: none;
+       background-color: rgb(255, 255, 255);
+       width: 300px;
+       cursor: pointer;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .signUpPage .firstName input[type = 'text']:focus{
+       border-color: #2ecc71;
+       background-color: whitesmoke;
+   } 
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .signUpPage .Sign-username{
+       padding-bottom: 30px;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .signUpPage .Sign-username input[type = 'text'] {
+       border: 2px solid  black;
+       border-radius: 40px;
+       padding: 14px;
+       font-size: medium;
+       margin: 5px;
+       outline: none;
+       background-color: rgb(255, 255, 255);
+       width: 300px;
+       cursor: pointer;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .signUpPage .Sign-username input[type = 'text']:focus {
+       border-color: #2ecc71;
+       background-color: whitesmoke;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .signUpPage .Sign-username input[type = 'password'] {
+       border: 2px solid black;
+       border-radius: 40px;
+       padding: 14px;
+       font-size: medium;
+       margin: 5px;
+       outline: none;
+       background-color: rgb(255, 255, 255);
+       width: 300px;
+       cursor: pointer;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .signUpPage .Sign-username input[type = 'password']:focus {
+       border-color: #2ecc71;
+       background-color: whitesmoke;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .signUpPage .Sign-email{
+       padding-bottom: 30px;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .signUpPage .Sign-email input[type = 'number'] {
+       border: 2px solid black;
+       border-radius: 40px;
+       padding: 14px;
+       font-size: medium;
+       margin: 5px;
+       outline: none;
+       background-color: rgb(255, 255, 255);
+       width: 300px;
+       cursor: pointer;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .signUpPage .Sign-email input[type = 'number']:focus {
+       border-color: #2ecc71;
+       background-color: whitesmoke;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .signUpPage .Sign-email input[type = 'email'] {
+       border: 2px solid black;
+       border-radius: 40px;
+       padding: 14px;
+       font-size: medium;
+       margin: 5px;
+       outline: none;
+       background-color: rgb(255, 255, 255);
+       width: 300px;
+       cursor: pointer;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .signUpPage .Sign-email input[type = 'email']:focus{
+       border-color: #2ecc71;
+       background-color: whitesmoke;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .submit-button{
+       padding: 20px;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .submit-button input[type = "submit"]{
+       background: none;
+       text-align: center;
+       border: 2px solid #2ecc71;
+       padding: 20px;
+       width: 200px;
+       outline: none;
+       color: white;
+       border-radius: 40px;  
+       cursor: pointer;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .submit-button input[type = "submit"]:hover{
+       border-color: #2ecc71;
+       background-color: #2ecc71;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .white-space{
+       background-color: white;
+       height: 5px;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .end{
+       display: flex;
+       background-image: url(photos/background.jpg);
+       background-repeat: no-repeat;
+       background-size: cover;
+       align-items: center;
+       justify-content: space-around;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .info1{
+       border: 2px solid #303030;
+       background-color: #303030;
+       height: 500px;
+       width: 400px;
+       margin: 40px;
+       text-align: center;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .info2{
+       border: 2px solid #303030;
+       background-color: #303030;
+       height: 500px;
+       width: 400px;
+       margin: 40px;
+       text-align: center;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .info3{
+       position: relative;
+       border: 2px solid #303030;
+       background-color: #303030;
+       height: 500px;
+       width: 400px;
+       margin: 40px;
+       text-align: center;
+   }
+   
+    /*-------------------------------------------------------------------------- */
+   
+    .end p{
+       font-size: 30px;
+       color: rgb(233, 233, 233);
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .end h3{
+       color: white;
+       font-size: 50px;
+       margin-bottom: 20px;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   
+   .footer .block-list{
+       padding: 20px;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .footer .block-list ul{
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .footer .block-list ul li{
+       list-style-type: none;
+      
+   }
+   
+   /*-------------------------------------------------------------------------- */
+   
+   .footer .block-list ul li a{
+       text-decoration: none;
+       color: white;
+       font-size: 30px;
+       font-weight: bolder;
+       font-family: sans-serif;
+   }
+   
+   .footer .block-list ul li a:hover{
+       color: rgb(158, 158, 158);
+   }
+   /*-------------------------------------------------------------------------- */
+   
+   .footer .copy{
+       text-align: center;
+       padding-top: 30px;
+       color: whitesmoke;
+       font-size: 20px;
+       letter-spacing: 5px;
+       word-spacing: 2px;
+       background-color:    rgb(54, 54, 54);
+       padding-bottom: 10px ;
+   }
+   
