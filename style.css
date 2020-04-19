@@ -229,7 +229,7 @@ body{
    
    /*-------------------------------------------------------------------------- */
    
-   .signUpPage .Sign-email input[type = 'number'] {
+   .signUpPage .Sign-email input[type = 'date'] {
        border: 2px solid black;
        border-radius: 40px;
        padding: 14px;
@@ -243,7 +243,7 @@ body{
    
    /*-------------------------------------------------------------------------- */
    
-   .signUpPage .Sign-email input[type = 'number']:focus {
+   .signUpPage .Sign-email input[type = 'date']:focus {
        border-color: #2ecc71;
        background-color: whitesmoke;
    }
