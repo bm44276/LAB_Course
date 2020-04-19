@@ -1,0 +1,375 @@
+*{
+     margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+
+    background: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: auto;
+}
+::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(21, 21, 54);
+  }
+   
+::-webkit-scrollbar-thumb {
+    background-color: #2ecc71;
+    outline: 1px solid slategrey;
+  }
+
+
+.topNav{
+    width: 100%;
+    display: block;   
+    background-color:  #27313f;
+}
+
+.topNav .title{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.topNav .image{
+    width: 73px;
+    height: 70px;
+    border: 1px rgb(22, 22, 22) solid;
+}
+
+.topNav .title h1{
+    text-align: left;
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+    word-spacing: 10px;
+    letter-spacing: 8px;
+    padding-left: 20px;
+    
+}
+
+.title h1 .one{
+    color: rgb(0, 255, 0);
+}
+.title h1 .two{
+    color: rgb(0, 0, 255);
+}
+.title h1 .three{
+    color: rgb(255, 0, 0);
+}
+
+/*--------------------------------------Navigation----------------------------------------*/
+.topNav .navigation{
+    background-color: rgb(21, 21, 54); 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px ;
+     align-items: center;
+     z-index: 6;
+     padding: 5px;
+}
+/*------------------------------------List------------------------------------------*/
+.topNav .navigation .list{
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+.topNav .navigation .list a{
+    display: inline-block;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: white;
+    word-spacing: 5px;
+    font-size: 30px;
+    margin-bottom: 3px;
+}
+.topNav .navigation .list .al:hover{
+    background-color:  #27313f;
+    color: rgb(255, 255, 255);
+}
+
+.navigation .list .activ{
+    background-color: #23354d;
+}
+
+.navigation .subnav2{
+    overflow: hidden;
+    float: left;
+}
+
+
+.navigation .list .subnav2{
+    height: auto;
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: rgb(21, 21, 54);
+    width: 100%;
+    z-index: 4;
+    padding: 5px;
+    border-top: 2px gray solid;
+    
+}
+.subnav2 .sb{
+    font-size: 70px;
+    float: left;
+    color: white;
+    text-decoration: none;
+    
+  }
+
+  .navigation .subnav2 .sb:hover {
+    background-color: #27313f;
+    color: rgb(255, 255, 255);
+  }
+  
+  .subnav:hover .subnav2 {
+    display: block;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+/*------------------------------------Search Input------------------------------------------*/
+.topNav .navigation .search{
+    width: 100%;
+    text-align: center;
+    margin-left: 200px;
+}
+
+
+.topNav .navigation input[type = "search"]{
+    border: 3px solid #121315;
+    border-radius: 50px;
+    padding: 7px;
+    font-size: x-large;
+    margin: 5px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    cursor: pointer;
+
+}
+
+.topNav .navigation input[type = "search"]:focus{
+    background-color: whitesmoke;
+    border: #111;
+}
+
+/*------------------------------------Settings------------------------------------------*/
+  .topNav .navigation .profile{
+        height: auto;
+        text-align: center;
+        padding: 7px;
+  }
+  .topNav .navigation .profile img{
+      float: right;
+      padding-right: 20px;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+  }
+  .profile .profile-items { 
+    width: 0;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    background-color: rgb(34, 34, 34);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 70px;
+    height: 100%;
+    border-top-left-radius: 20px;
+    }
+
+
+.profile-items li a{
+    padding: 30px 8px 30px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+    font-size: 30px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+.profile-items li .styler:hover{
+    background-color:   rgb(47, 47, 47);
+  }
+.profile .profile-items .exit{
+    position: absolute;
+    top: 5px;
+    padding: 5px;
+    left: 10px;   
+     width: 10px;
+    height: 10px;
+}
+
+.profile-items button{
+    margin-top: 20px;
+    padding: 15px 8px 15px 8px;
+    font-size: 25px;
+    color: white;
+    background-color: #2c2e31;
+    width: 50%;
+    border-radius: 100px;
+    border: 2px solid #2ecc71;
+}
+
+.profile-items button:hover{
+    border-color: #2ecc71;
+    background-color: #2ecc71;
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
+
+/*--------------------------------------------  Main of the Page  ---------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
+.Home{
+    background-image: url(photos/Background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    height: 600px;
+    margin-top: 5px;
+
+}
+.Home .Titul{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.Home h1{
+    font-size: 60px;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 5px;
+    padding: 20px;
+}
+.Home p{
+    padding: 40px;
+    margin: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    background: black;
+    opacity: 0.8;
+    letter-spacing: 5px;
+    text-align: left;
+}
+
+.Home img{
+    width: 200px;
+    height: 200px;
+}
+
+.main .Items {
+    padding: 10px;
+    background-color: #27313f ;
+    margin-top: 5px;
+    
+}
+
+
+.Sector{
+    width: auto;
+    background-color:#27313f;
+    padding: 20px;
+    display: flex;
+    overflow:hidden;
+    scroll-behavior: smooth;
+    margin-top: 20px;
+    border-top: 1px gray solid;
+    padding-bottom:40px;
+}
+
+.Sector:hover{
+    overflow-x: scroll;
+}
+  .main  h1  {
+    font-family: Arial;
+    color:rgb(255, 46, 46);
+    font-size: 36px;
+    text-align: left;
+    z-index: 1;
+    padding: 10px;
+    letter-spacing: 5px;
+    word-spacing: 20px;
+    
+  }
+  .Items{
+    padding: 10px;
+      color: white;
+      text-align: left;
+      font-size: 22px;
+      font-weight: bold;
+      border-bottom: 1px gray solid;
+      letter-spacing: 3px;
+  }
+
+ .Items p{
+      padding: 10px;
+      color: white;
+      text-align: left;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 3px;
+  }
+
+  .Sector .item{
+        padding: 5px 5px;
+        transition: 250ms all;
+  }
+
+   .Sector .item:hover{
+    margin:10px 40px;
+    transform: scale(1.2);
+  }
+
+
+  .Sector img{
+      width: 370px;
+      height: 300px;
+  }
+
+  
+  .footer .copy{
+    text-align: center;
+    padding-top: 30px;
+    color: whitesmoke;
+    font-size: 20px;
+    letter-spacing: 5px;
+    word-spacing: 2px;
+    background-color:    #27313f ;
+    padding-bottom: 10px ;
+    margin-top: 14px;
+}
