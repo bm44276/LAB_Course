@@ -11,7 +11,6 @@ $Email = $_POST["email"];
 $Username = $_POST["user-name"];
 $Password = $_POST["password"];
 $Age = str_replace("-","/",$Age); 
-echo "<p>$FirstName.$LastName.$Age.$Email.$Username.$Password</p>";
 
 $usernametaken = "SELECT * FROM accounts WHERE Username = '$Username'";
 $result = $DB->query($usernametaken);
