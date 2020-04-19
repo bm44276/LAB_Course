@@ -6,21 +6,21 @@ header('location:index.html');
 
 $FirstName = $_POST["first-name"];
 $LastName = $_POST["last-name"];
-$Age = $_POST["mosha"];
+$Age = $_POST["date"];
 $Email = $_POST["email"];
 $Username = $_POST["user-name"];
-$Ppassword = $_POST["password"];
+$Password = $_POST["password"];
+$Age = str_replace("-","/",$Age); 
+echo "<p>$FirstName.$LastName.$Age.$Email.$Username.$Password</p>";
 
-
-
-$usernametaken = "SELECT * FROM acc WHERE Username = '$Username'";
+$usernametaken = "SELECT * FROM accounts WHERE Username = '$Username'";
 $result = $DB->query($usernametaken);
 $num = mysqli_num_rows($result);
 if($num == 1){
     //username taken
 }else{
-    $myquery = "INSERT INTO accounts VALUES ('$FirstName','$LastName',$Age,'$Email','$Username','$Ppassword');";
+    $myquery = "INSERT INTO accounts (Name,Surname,Age,Email,Username,Password) VALUES ('$FirstName','$LastName','$Age','$Email','$Username','$Password');";
     $DB->query($myquery);
-
+    header("location:thankYouPage.html");
 }
 ?>

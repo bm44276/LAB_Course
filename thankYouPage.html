@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #303030;
+            }
+            .message{
+                border: 1px solid white;
+                width: 500px;
+                height: 600px;
+                text-align: center;
+                margin: 0px;
+                position: relative;
+                margin: auto;
+                top: 100px;
+              
+            }
+            #congrats{
+                color: aliceblue;
+                font-size: 60px;
+                padding-top: 0px ;
+            }
+            #text{
+                color: aliceblue;
+                font-size: 40px;
+            }
+            #backHome{
+                background: none;
+                 text-align: center;
+                border: 2px solid #2ecc71;
+                padding: 20px;
+                width: 200px;
+                outline: none;
+                color: white;
+                border-radius: 40px;  
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+             function homepage() {
+                location.href = "index.html";
+            };
+        </script>
+        <div class="message">
+            <h1 id="congrats">Thank You</h1>
+            <hr>
+            <p id="text">Congratulations your account was created successfully</p>
+            <button id="backHome" onclick="homepage()">Home</button>
+        </div>
+
+    </body>
+</html>
