@@ -4,13 +4,15 @@ include_once "connectDB.php";
 session_start();
 header('location:index.html');
 
-$FirstName = $_POST["first-name"];
-$LastName = $_POST["last-name"];
-$Age = $_POST["date"];
-$Email = $_POST["email"];
-$Username = $_POST["user-name"];
-$Password = $_POST["password"];
+$FirstName = mysqli_real_escape_string($DB,$_POST["first-name"]);
+$LastName = mysqli_real_escape_string($DB,$_POST["last-name"]);
+$Age = mysqli_real_escape_string($DB,$_POST["date"]);
 $Age = str_replace("-","/",$Age); 
+//$Age = mysqli_real_escape_string($DB,$AGE);
+$Email = mysqli_real_escape_string($DB,$_POST["email"]);
+$Username = mysqli_real_escape_string($DB,$_POST["user-name"]);
+$Password = mysqli_real_escape_string($DB,$_POST["password"]);
+
 
 $usernametaken = "SELECT * FROM accounts WHERE Username = '$Username'";
 $result = $DB->query($usernametaken);
