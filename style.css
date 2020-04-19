@@ -54,7 +54,7 @@ body{
    
    /*-------------------------------------------------------------------------- */
    
-   .topNav nav input[type = "email"], .topNav nav input[type = "password"]{
+   .topNav nav input[type = "text"], .topNav nav input[type = "password"]{
        border: 3px solid  rgb(54, 54, 54);
        border-radius: 20px;
        padding: 7px;
@@ -68,7 +68,7 @@ body{
    
    /*-------------------------------------------------------------------------- */
    
-   .topNav nav input[type ="email"]:focus,.topNav nav input[type = "password"]:focus{
+   .topNav nav input[type ="text"]:focus,.topNav nav input[type = "password"]:focus{
        border-color: #2ecc71;
    
    }
@@ -96,7 +96,7 @@ body{
    
    /*-------------------------------------------------------------------------- */
    
-   .topNav nav input[type ="email"]::placeholder,.topNav nav input[type = "password"]::placeholder{
+   .topNav nav input[type ="text"]::placeholder,.topNav nav input[type = "password"]::placeholder{
       font-size: 18px;
    }
    

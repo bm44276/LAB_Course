@@ -61,16 +61,6 @@ body{
     
 }
 
-.title h1 .one{
-    color: rgb(0, 255, 0);
-}
-.title h1 .two{
-    color: rgb(0, 0, 255);
-}
-.title h1 .three{
-    color: rgb(255, 0, 0);
-}
-
 /*--------------------------------------Navigation----------------------------------------*/
 .topNav .navigation{
     background-color: rgb(21, 21, 54); 
