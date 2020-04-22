@@ -1,3 +1,6 @@
+<?php
+   
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,71 +82,85 @@
       </p>
   </div>
 
+
+
+
+  <!--Javcript code to create the buttons and add images and video links when you click them-->
+  <script>
+              function SetVideos(section,PhotoPath,VideoPath){
+              
+                let a = document.getElementById(section);
+                let diving = document.createElement("div");
+                diving.className = "Item";
+                
+                let b = document.createElement("button");
+                b.style.height = "300px";
+                b.style.width = "400px";
+                b.style.margin = "10px";
+                
+                 b.style.backgroundImage = "url('videos/"+PhotoPath+"')";
+                b.onclick = function(){
+                let container = document.createElement("div");
+                container.style.position = "fixed";
+                container.style.top = "0px";
+                let remove = document.createElement("button");
+                remove.style.height = "50px";
+                remove.style.width = "100px";
+                remove.style.position = "relativ";
+                remove.style.top = "0px";
+                let vid = document.createElement('video');
+                vid.controls = true;
+                vid.style.height = "80%";
+                vid.style.width = "80%";
+                vid.src = "videos/"+VideoPath;
+                       
+                container.appendChild(vid);
+                document.body.appendChild(container);
+    
+                }
+                diving.appendChild(b);
+                a.appendChild(diving);
+              }
+              
+            </script>
+            <!--The end of this part-->
+              <!--The php function gets the path of videos and phots from  database and calls the javascript function to create the buttons ans set them up-->
+              <?php
+                function getPaths($sectionName,$type){
+                  
+              $DB = new mysqli('localhost',"root","","test") or die;
+             $execute = "SELECT * FROM workouts WHERE FolderName = '$type';"; 
+             $result = $DB->query($execute);
+            $sectionName = "\"".$sectionName."\"";
+            
+            while($row = mysqli_fetch_assoc($result)){
+               
+               $path = "'".$row['FolderName']."/".$row['Video']."/".$row['Photo'].".PNG"."'";
+               $path2 = "'".$row['FolderName']."/".$row['Video']."/".$row['Video'].".mp4"."'";
+              
+        ?>
+        
+           <script>    
+                SetVideos(<?php echo $sectionName;?>,<?php echo $path;?>,<?php echo $path2;?>);  
+          </script>
+        <?php
+         }
+          }  
+           ?>
+
+                 
+            
+
 <div class="main" id="main">
 
 
   <div class="Items" id= "Full-Body">
  
 <h1 >Full Body</h1>
-  <div class="Sector">
-      
-    <!-- Section 1 -->
-   
-        <div class="item">
-          <img src="photos/Gym-Background-Final.jpg"/>
-        </div>
-        <div class="item">
-          <img src="photos/exersise.jpg"/>
-        </div>
-        <div class="item">
-          <img src="photos/Supplement-Fitness.jpg"/>
-        </div>
-        <div class="item">
-          <img src="photos/Gym-Background-Final.jpg"/>
-        </div>
-        <div class="item">
-          <img src="photos/exersise.jpg"/>
-        </div>
- 
-    <!-- Section 2 -->
-  
-        <div class="item">
-          <img src="photos/Supplement-Fitness.jpg"/>
-        </div>
-        <div class="item">
-          <img src="photos/exersise.jpg"/>
-        </div>
-        <div class="item">
-          <img src="photos/exersise.jpg"/>
-        </div>
-        <div class="item">
-          <img src="photos/Gym-Background-Final.jpg"/>
-        </div>
-        <div class="item">
-          <img src="photos/Supplement-Fitness.jpg"/>
-        </div>
-
-    
-    <!--  Section 3 -->
-
-      
-        <div class="item">
-          <img src="photos/Supplement-Fitness.jpg"/>
-        </div>
-        <div class="item">
-          <img src="photos/Gym-Background-Final.jpg"/>
-        </div>
-        <div class="item">
-          <img src="photos/Supplement-Fitness.jpg"/>
-        </div>
-        <div class="item">
-          <img src="photos/Gym-Background-Final.jpg"/>
-        </div>
-        <div class="item">
-          <img src="photos/exersise.jpg"/>
-        </div>
-    
-   
+  <div class="Sector" id="FullBodyDIV">
+   <?php
+      getPaths("FullBodyDIV","FullBody");
+  ?>
 </div>
 </div>
      
@@ -156,65 +173,11 @@
     Engage your core so you keep your back straight. Using the barbell,
      start below your knee and in a smooth motion, and leading with your elbows, bring the weight up to your upper abdominals.
     </p>
-   <div class="Sector">
+   <div class="Sector" id="UpperBodyDIV">
       
-         
-    <!-- Section 1 -->
-   
-    <div class="item">
-      <img src="photos/Gym-Background-Final.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/exersise.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Supplement-Fitness.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Gym-Background-Final.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/exersise.jpg"/>
-    </div>
-
-<!-- Section 2 -->
-
-    <div class="item">
-      <img src="photos/Supplement-Fitness.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/exersise.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/exersise.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Gym-Background-Final.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Supplement-Fitness.jpg"/>
-    </div>
-
-
-<!--  Section 3 -->
-
-  
-    <div class="item">
-      <img src="photos/Supplement-Fitness.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Gym-Background-Final.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Supplement-Fitness.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Gym-Background-Final.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/exersise.jpg"/>
-    </div>
-
+   <?php
+     // getPaths();
+  ?>
 
    </div>
  </div>
@@ -226,63 +189,11 @@
      They are designed to tone and strengthen the major lower body muscles: gluteus maximus and gluteus minimus, also called the glutes (butt); quadriceps, also called quads (front upper-legs);
  hamstrings (rear upper legs); calves (rear lower legs); hips (abductors); and feet (plantar fascia).
     </p>
-   <div class="Sector">
-      <!-- Section 1 -->
-   
-    <div class="item">
-      <img src="photos/Gym-Background-Final.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/exersise.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Supplement-Fitness.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Gym-Background-Final.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/exersise.jpg"/>
-    </div>
-
-<!-- Section 2 -->
-
-    <div class="item">
-      <img src="photos/Supplement-Fitness.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/exersise.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/exersise.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Gym-Background-Final.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Supplement-Fitness.jpg"/>
-    </div>
-
-
-<!--  Section 3 -->
-
-  
-    <div class="item">
-      <img src="photos/Supplement-Fitness.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Gym-Background-Final.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Supplement-Fitness.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Gym-Background-Final.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/exersise.jpg"/>
-    </div>
-      
+   <div class="Sector" id="LowerBodyDIV">
+   <?php
+      //getPaths();
+  ?>
+   <
    </div>
  </div>
 
@@ -293,62 +204,10 @@
      Your heart is a muscle. Therefore working it makes it stronger. <br>
      A stronger cardio-vascular system means more capillaries delivering more oxygen to cells in your muscles.
     </p>
-   <div class="Sector">
-      <!-- Section 1 -->
-   
-    <div class="item">
-      <img src="photos/Gym-Background-Final.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/exersise.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Supplement-Fitness.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Gym-Background-Final.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/exersise.jpg"/>
-    </div>
-
-<!-- Section 2 -->
-
-    <div class="item">
-      <img src="photos/Supplement-Fitness.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/exersise.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/exersise.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Gym-Background-Final.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Supplement-Fitness.jpg"/>
-    </div>
-
-
-<!--  Section 3 -->
-
-  
-    <div class="item">
-      <img src="photos/Supplement-Fitness.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Gym-Background-Final.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Supplement-Fitness.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/Gym-Background-Final.jpg"/>
-    </div>
-    <div class="item">
-      <img src="photos/exersise.jpg"/>
-    </div>
+   <div class="Sector" id="CardioDIV">
+   <?php
+    //  getPaths();
+  ?>
        
    </div>
  </div>
