@@ -16,7 +16,7 @@
      <header>
           <div class="title">
               <img src="photos/Capture.PNG" alt="YourFitnesGuide" class="image">
-                <h1> <b class="one">Y</b>our <b class="two">F</b>itness <b class="three">G</b>uide</h1>
+                 <h1>Your Fitness Guide</h1>
          </div>
                 
      </header>
@@ -24,9 +24,9 @@
       <div class="navigation" id="mynav">
          <div class="list">
               <a href="#home" class="activ al" >Home</a>
-                <div class="subnav" id="subnav">
-                      <a href="#workout" class="btn al" onclick="wFunciton()">Workout</a>
-                         <div class="subnav2 "> 
+                <div class="subnav" id="subnav" >
+                      <a href="#workout" class="btn al" onclick="myfun()">Workout</a>
+                         <div class="subnav2" id="subnav2"> 
                             <a href="#Full-Body" class="sb">Full Body</a>
                             <a href="#Upper-Body" class="sb">Upper Body</a>
                             <a href="#Lower-Body" class="sb">Lower Body</a>
@@ -48,7 +48,7 @@
                   <a href="#" onclick="secFunction()"><img src="photos/x-button.png" alt="exit" class="exit"></a>
                   </li>
                      <li>
-                     <a href="#Profile" class="styler">Profile</a>
+                     <a href="profile.html" class="styler">Profile</a>
                      </li>
                           <li>
                           <a href="#AddWorkOut"  class="styler">AddWorkOut</a>
@@ -193,7 +193,7 @@
    <?php
       //getPaths();
   ?>
-   <
+   
    </div>
  </div>
 
@@ -237,7 +237,38 @@ function  myFunction() {
 function secFunction() {
   document.getElementById("navi").style.width = "0";
 }
+window.onscroll = function() {navFunction()};
 
+var navbar = document.getElementById("mynav");
+var sticky = navbar.offsetTop;
+
+function navFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+function navFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+var subnav = document.getElementById("subnav2");
+        function myfun(){
+         if(subnav.style.display == "block"){
+          subnav.style.display = "none";
+         }
+         else
+         {
+           subnav.style.display = "block"
+         }
+     
+        }
 //-------------------------------------------------------
 
 
