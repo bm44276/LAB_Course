@@ -122,9 +122,6 @@ body{
     
   }
 
-  .subnav:hover .subnav2 {
-    display: block;
-  }
   .sticky {
     position: fixed;
     top: 0;
