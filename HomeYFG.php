@@ -34,9 +34,11 @@
                          </div>
               </div>  
                      <a href="FoodYFG.html" class="btn al" >Food</a>
+                      <a href="#" class="al">Costum</a>
           </div>
             <div class="search">
                  <input type="search" name="search" id="search" placeholder="Search...">
+               <button>Search</button>
              </div>
                 <div class="profile">
                     <a href="#" onclick="myFunction()">
