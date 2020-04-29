@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+   padding: 0;
+}
+
+
+body{
+   background: white;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+
+.topNav header{
+    padding: 10px;
+    background-color:rgb(21, 21, 54);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   width: auto;
+}
+
+
+
+.topNav .image{
+    width: 73px;
+    height: 70px;
+    border: 1px rgb(22, 22, 22) solid;
+}
+
+  .topNav  h1{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+    word-spacing: 10px;
+    letter-spacing: 8px;
+    padding-left: 20px;
+    
+}
+
+
+.main
+{   
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 5px;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 3px gray solid;
+    height: auto;
+    padding-bottom: 30px;
+    background-color: rgb(240, 240, 240);
+}
+
+.main .section1{
+    padding-top: 50px;
+}
+
+.section1 a{
+    display: block;
+    text-decoration: none;
+    font-size: 30px;
+    padding-bottom: 20px;
+    color: black;
+    font-weight: bolder;
+    padding-top: 40px;
+
+}
+
+.section1 a:hover{
+    background-color: #2ecc71 ;
+    color: white;
+}
+
+.section1 button{
+    border: 2px #2ecc71 solid;
+    border-radius: 40px;
+    width: 25%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 40px 0;
+}
+
+.section1 button:hover{
+    background-color: #2ecc71;
+    color: white;
+}
+
+.main .section2{
+    border-left: 2px gray solid;
+    border-right: 2px gray solid;
+    padding-top: 50px;
+    justify-content: center;
+}
+
+.section2 h1{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.section2 input{
+    border: 2px solid blue;
+    border-radius: 40px;
+    padding: 15px;
+    font-size: 20px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.section2 input::placeholder{
+    font-size: large;
+    font-weight: bolder;
+    text-align: left;
+    letter-spacing: 5px;
+    color: rgba(19, 19, 19, 0.555);
+}
+
+.section2 p{
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    word-spacing: 7px;
+    margin-bottom: 15px;
+}
+
+.section2 #Pesha {
+    border: 2px solid blue;
+    border-radius: 40px;
+    padding: 14px;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    width: 53%;
+    cursor: pointer;
+    margin-bottom: 20px;
+    color: black;
+}
+
+#Pesha option{
+    color: black;
+    font-size: 25px;
+}
+
+.section2 #Gender {
+    border: 2px solid blue;
+    border-radius: 40px;
+    padding: 14px;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    width: 53%;
+    cursor: pointer;
+    margin-bottom: 20px;
+    color: black;
+}
+
+#Gender option{
+    color: black;
+    font-size: 25px;
+}
+
+
+.main .section3{
+    padding: 10px;
+    padding-top: 30px;
+}
+
+.section3 h1{
+    margin-bottom: 10px;
+    font-weight: bolder;
+    word-spacing: 8px;
+}
+
+.section3 p{
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-bottom: 1px gray solid;
+    padding: 10px 3px;
+    text-align: left;
+}
+
+footer .copy{
+    text-align: center;
+    padding-top: 30px;
+    color: whitesmoke;
+    font-size: 20px;
+    letter-spacing: 5px;
+    word-spacing: 2px;
+    background-color: rgb(21, 21, 54);
+    padding-bottom: 10px ;
+    margin-top: 14px;
+}
