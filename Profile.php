@@ -17,8 +17,8 @@
         </div>
     </header>
     <nav>
-        <a href="HomeYFG.html">Home</a>
-        <a href="HomeYFG.html">Food</a>
+        <a href="HomeYFG.php">Home</a>
+        <a href="FoodYFG.html">Food</a>
         <button>Log Out</button>
     </nav>
   </div>
