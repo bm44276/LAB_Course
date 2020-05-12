@@ -1,5 +1,5 @@
 <?php
-   
+   session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +34,7 @@
                          </div>
               </div>  
                      <a href="FoodYFG.html" class="btn al" >Food</a>
-                      <a href="#" class="al">Costum</a>
+                      <a href="costum.html" class="al">Costum</a>
           </div>
             <div class="search">
                  <input type="search" name="search" id="search" placeholder="Search...">
@@ -50,13 +50,13 @@
                   <a href="#" onclick="secFunction()"><img src="photos/x-button.png" alt="exit" class="exit"></a>
                   </li>
                      <li>
-                     <a href="profile.html" class="styler">Profile</a>
+                     <a href="Profile.php" class="styler">Profile</a>
                      </li>
                           <li>
                           <a href="#AddWorkOut"  class="styler">AddWorkOut</a>
                          </li>
                              <li>
-                                <button>Log Out</button>
+                             <a href="LogOut.php">Logout</a>
                             </li>
              </ul>
                             
@@ -100,7 +100,7 @@
                 b.style.width = "400px";
                 b.style.margin = "10px";
                 
-                 b.style.backgroundImage = "url('videos/"+PhotoPath+"')";
+                b.style.backgroundImage = "url('videos/"+PhotoPath+"')";
                 b.onclick = function(){
                 let container = document.createElement("div");
                 container.style.position = "fixed";
@@ -137,7 +137,7 @@
             
             while($row = mysqli_fetch_assoc($result)){
                
-               $path = "'".$row['FolderName']."/".$row['Video']."/".$row['Photo'].".PNG"."'";
+               $path = "'".$row['FolderName']."/".$row['Video']."/".$row['Photo'].".jpg"."'";
                $path2 = "'".$row['FolderName']."/".$row['Video']."/".$row['Video'].".mp4"."'";
               
         ?>
@@ -161,7 +161,7 @@
 <h1 >Full Body</h1>
   <div class="Sector" id="FullBodyDIV">
    <?php
-      getPaths("FullBodyDIV","FullBody");
+      getPaths("FullBodyDIV","Full-Body");
   ?>
 </div>
 </div>
@@ -178,7 +178,7 @@
    <div class="Sector" id="UpperBodyDIV">
       
    <?php
-     // getPaths();
+      getPaths("UpperBodyDIV","Upper-Body");
   ?>
 
    </div>
@@ -193,7 +193,8 @@
     </p>
    <div class="Sector" id="LowerBodyDIV">
    <?php
-      //getPaths();
+       getPaths("LowerBodyDIV","Lower-Body");
+       ?>
   ?>
    
    </div>
@@ -271,8 +272,6 @@ var subnav = document.getElementById("subnav2");
          }
      
         }
-//-------------------------------------------------------
-
 
 //-------------------------------------------------------
 

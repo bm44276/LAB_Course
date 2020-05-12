@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +20,9 @@
         </div>
     </header>
     <nav>
-        <a href="HomeYFG.html">Home</a>
-        <a href="HomeYFG.html">Food</a>
-        <button>Log Out</button>
+        <a href="HomeYFG.php">Home</a>
+        <a href="FoodYFG.html">Food</a>
+        <a href="LogOut.php">Logout</a>
     </nav>
   </div>
 
@@ -30,41 +33,41 @@
             <form action="">
             
               <div>
-                <input type="text" name="username" id="username" placeholder="Username">
-                <button>Submit</button>
-              </div>
-
-              <div>
                 <input type="password" name="password" id="password" placeholder="Old password">
-                <button>Submit</button>
+              
               </div>
 
               <div>
                 <input type="password" name="newPassword" id="newPassword" placeholder="New password">
-                <button>Submit</button>
+                
               </div>
-
+              <button>Submit</button>
             </form>
         </div>
           
         <div class="section2">
-          <h1>Your Account Info</h1>
+          <h1>Account Info</h1>
           <div>
-            <label for="">Your Firstname:</label>
-            <input type="text" name="firstname" id="firstname" placeholder="Firstname">
+            <label for="">Firstname: </label>
+            <Label><?php echo $_SESSION['name'];?></Label>
           </div>
           <div>
-            <label for="">Your Lastname:</label>
-            <input type="text" name="Lastname" id="lastname" placeholder="Lastname">
+            <label for="">Lastname: </label>
+            <Label><?php echo $_SESSION['surname'];?></Label>
           </div>
           <div>
-            <label for="">Your Username:</label>
-            <input type="text" name="username" id="username" placeholder="Username">
+            <label for="">Username: </label>
+            <Label><?php echo $_SESSION['username'];?></Label>
           </div>
           
+          <div class="age">
+            <label>Birthday: </label>
+            <Label><?php echo $_SESSION['age'];?></Label>
+          </div> 
+
           <div class="email">
-            <label>Your Email:</label>
-            <input type="email" name="email" id="email" placeholder="Email">
+            <label>Your Email: </label>
+            <Label><?php echo $_SESSION['email'];?></Label>
           </div>
 
         
@@ -84,4 +87,6 @@
   </footer>
   
 </body>
+  
+
 </html>
