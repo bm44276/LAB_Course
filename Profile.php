@@ -23,6 +23,7 @@
         <a href="HomeYFG.php">Home</a>
         <a href="FoodYFG.html">Food</a>
         <a href="LogOut.php">Logout</a>
+        
     </nav>
   </div>
 
@@ -87,6 +88,4 @@
   </footer>
   
 </body>
-  
-
 </html>

@@ -2,3 +2,4 @@
 Session_start();
 Session_destroy();
 header("location:index.html");
+
