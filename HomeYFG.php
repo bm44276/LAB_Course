@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="HomeYFG.css" type="text/css">
     <link rel="icon" type="image/ico" href="photos/Capture.PNG" >
 </head>
-<body>
- 
+<body> 
+
   <div class="topNav">
      <header>
           <div class="title">
               <img src="photos/Capture.PNG" alt="YourFitnesGuide" class="image">
                  <h1>Your Fitness Guide</h1>
          </div>
-                
+
      </header>
     <nav>
       <div class="navigation" id="mynav">
@@ -26,13 +26,13 @@
               <a href="#home" class="activ al" >Home</a>
                 <div class="subnav" id="subnav" >
                       <a href="#workout" class="btn al" onclick="myfun()">Workout</a>
-                         <div class="subnav2" id="subnav2"> 
+                         <div class="subnav2" id="subnav2">
                             <a href="#Full-Body" class="sb">Full Body</a>
                             <a href="#Upper-Body" class="sb">Upper Body</a>
                             <a href="#Lower-Body" class="sb">Lower Body</a>
                             <a href="#Cardio" class="sb">Cardio</a>
                          </div>
-              </div>  
+              </div>
                      <a href="FoodYFG.html" class="btn al" >Food</a>
                       <a href="costum.html" class="al">Costum</a>
           </div>
@@ -59,27 +59,28 @@
                              <a href="LogOut.php">Logout</a>
                             </li>
              </ul>
-                            
+
+
 
                  </div>
          </div>
-                
+
      </nav>
   </div>
 
   <div class="Home">
      <div class="Titul">
-        
+
      <img src="photos/Capture.PNG" alt="YourFitnesGuide">
-        <h1> 
+        <h1>
         Your Fitness Guide
       </h1>
-       
+
      </div>
-       
+
       <p>
-        Walking, lifting weights, doing chores – it’s all good. Regardless of what you do, regular exercise and physical activity is the path to health and well-being. 
-         Exercise burns fat, builds muscle, lowers cholesterol, eases stress and anxiety, lets us sleep restfully. 
+        Walking, lifting weights, doing chores – it’s all good. Regardless of what you do, regular exercise and physical activity is the path to health and well-being.
+         Exercise burns fat, builds muscle, lowers cholesterol, eases stress and anxiety, lets us sleep restfully.
          In this guide, we match resources to your exercise needs at every fitness level.
       </p>
   </div>
@@ -90,74 +91,60 @@
   <!--Javcript code to create the buttons and add images and video links when you click them-->
   <script>
               function SetVideos(section,PhotoPath,VideoPath){
-              
+
                 let a = document.getElementById(section);
                 let diving = document.createElement("div");
                 diving.className = "Item";
-                
+
                 let b = document.createElement("button");
                 b.style.height = "300px";
                 b.style.width = "400px";
                 b.style.margin = "10px";
-                
+
                 b.style.backgroundImage = "url('videos/"+PhotoPath+"')";
                 b.onclick = function(){
-                let container = document.createElement("div");
-                container.style.position = "fixed";
-                container.style.top = "0px";
-                let remove = document.createElement("button");
-                remove.style.height = "50px";
-                remove.style.width = "100px";
-                remove.style.position = "relativ";
-                remove.style.top = "0px";
-                let vid = document.createElement('video');
-                vid.controls = true;
-                vid.style.height = "80%";
-                vid.style.width = "80%";
-                vid.src = "videos/"+VideoPath;
-                       
-                container.appendChild(vid);
-                document.body.appendChild(container);
-    
+                localStorage.setItem("storageName",VideoPath);
+                location.href = "displayvideo.php";
                 }
                 diving.appendChild(b);
                 a.appendChild(diving);
+
               }
-              
+
             </script>
             <!--The end of this part-->
               <!--The php function gets the path of videos and phots from  database and calls the javascript function to create the buttons ans set them up-->
               <?php
                 function getPaths($sectionName,$type){
-                  
+
               $DB = new mysqli('localhost',"root","","test") or die;
-             $execute = "SELECT * FROM workouts WHERE FolderName = '$type';"; 
+             $execute = "SELECT * FROM workouts WHERE FolderName = '$type';";
              $result = $DB->query($execute);
             $sectionName = "\"".$sectionName."\"";
-            
+
             while($row = mysqli_fetch_assoc($result)){
-               
+
                $path = "'".$row['FolderName']."/".$row['Video']."/".$row['Photo'].".jpg"."'";
                $path2 = "'".$row['FolderName']."/".$row['Video']."/".$row['Video'].".mp4"."'";
-              
+
         ?>
-        
-           <script>    
-                SetVideos(<?php echo $sectionName;?>,<?php echo $path;?>,<?php echo $path2;?>);  
+
+           <script>
+                SetVideos(<?php echo $sectionName;?>,<?php echo $path;?>,<?php echo $path2;?>);
           </script>
         <?php
          }
-          }  
+          }
            ?>
 
-                 
-            
+
+
 
 <div class="main" id="main">
 
 
   <div class="Items" id= "Full-Body">
- 
+
 <h1 >Full Body</h1>
   <div class="Sector" id="FullBodyDIV">
    <?php
@@ -165,8 +152,8 @@
   ?>
 </div>
 </div>
-     
-     
+
+
 <!--  -->
 <div class="Items" id="Upper-Body">
   <h1 >Upper Body</h1>
@@ -176,7 +163,7 @@
      start below your knee and in a smooth motion, and leading with your elbows, bring the weight up to your upper abdominals.
     </p>
    <div class="Sector" id="UpperBodyDIV">
-      
+
    <?php
       getPaths("UpperBodyDIV","Upper-Body");
   ?>
@@ -196,7 +183,7 @@
        getPaths("LowerBodyDIV","Lower-Body");
        ?>
   ?>
-   
+
    </div>
  </div>
 
@@ -211,7 +198,7 @@
    <?php
     //  getPaths();
   ?>
-       
+
    </div>
  </div>
 
@@ -219,7 +206,7 @@
 
 <footer>
   <div class="footer">
-       
+
 
           <div class="copy">
                  <p> &copy; YourFitnesGuide.com </p>
@@ -231,7 +218,7 @@
 
 
 
- 
+
 <!------------------------------------------------------------------------------------------------------------------->
 <script>
 function  myFunction() {
@@ -270,7 +257,7 @@ var subnav = document.getElementById("subnav2");
          {
            subnav.style.display = "block"
          }
-     
+
         }
 
 //-------------------------------------------------------
