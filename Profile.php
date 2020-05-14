@@ -31,18 +31,18 @@
 
         <div class="section1">
           <h1>Edit Account Information</h1>
-            <form action="">
+            <form action="changePassword.php" method="POST">
             
               <div>
-                <input type="password" name="password" id="password" placeholder="Old password">
+                <input type="password" name="password" id="password" required placeholder="Old password">
               
               </div>
 
               <div>
-                <input type="password" name="newPassword" id="newPassword" placeholder="New password">
+                <input type="password" name="newPassword" id="newPassword" required placeholder="New password">
                 
               </div>
-              <button>Submit</button>
+              <button type="submit" name="submit-button">Submit</button>
             </form>
         </div>
           
@@ -77,15 +77,26 @@
         
 
     </div>
+           <?php
+           $fullURL = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                   if(strpos($fullURL, "newpass=passwordIsNotLongEnough") == true){
+                        ?>
+                            <script>
+                                var username = document.getElementById("newPassword");
+                                username.placeholder = "Not long enough (min 6 Characters)";
+                                username.style = "border: 2px solid red;";
+                            </script> 
+                        <?php
+                    }
 
+               ?>
 
-  <footer>
+  <footer>  
     <div class="footer">
         <div class="copy">
           <p>&copy; YourFitnesGuide.com </p>
         </div>
     </div>
   </footer>
-  
 </body>
 </html>
