@@ -12,7 +12,7 @@
 </head>
 <body>
        
-  <div class="TopNav">
+  <div class="TopNav"> 
     <header>
         <div class="title">
             <img src="photos/Capture.PNG" alt="YourFitnesGuide" class="image">
