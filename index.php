@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" type="image/ico" href="photos/Capture.PNG" >
 </head>
 <body>
     <div class="topNav">
