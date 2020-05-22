@@ -10,7 +10,7 @@
 <body>
     <div class="topNav">
         <header>
-             <img src="Capture.PNG" alt="YourFitnesGuide" class="image">
+             <img src="photos/Capture.PNG" alt="YourFitnesGuide" class="image">
              <h1>YourFitnessGuide</h1>
         </header>
         <nav>
@@ -24,7 +24,7 @@
     </div>
         <hr>
         <div id="quote"><h1>Be the best version of yourself</h1></div>
-        <div id="quote-line"><img src="Path 2.png" alt=""></div>
+        <div id="quote-line"><img src="photos/Path 2.png" alt=""></div>
         <div id="background">
             <div id="signup">
                 <h1>

@@ -126,7 +126,7 @@ header{
     height: 1000px;
     position: relative;
     top: 300px;
-    background-image: url("967058.jpg");
+    background-image: url("photos/967058.jpg");
     background-repeat: no-repeat;
     align-content: center;
 }
@@ -191,7 +191,7 @@ header{
     top: 300px;
     display: flex;
     text-align: center;
-    background-image: url("Path 3.png")
+    background-image: url("photos/Path 3.png")
 }
 
 #info1{
