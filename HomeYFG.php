@@ -117,8 +117,8 @@
               <?php
                 function getPaths($sectionName,$type){
 
-              $DB = new mysqli('localhost',"root","","test") or die;
-             $execute = "SELECT * FROM workouts WHERE FolderName = '$type';";
+              $DB = new mysqli('localhost',"root","","yourfitnessguidedb") or die;
+             $execute = "SELECT * FROM videos WHERE FolderName = '$type';";
              $result = $DB->query($execute);
             $sectionName = "\"".$sectionName."\"";
 

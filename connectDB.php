@@ -1,6 +1,6 @@
 <?php
 
-$DB = new mysqli('localhost',"root","","fitness") or die;
+$DB = new mysqli('localhost',"root","","yourfitnessguidedb") or die;
 
 
 ?>
