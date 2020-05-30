@@ -24,7 +24,7 @@ if($num == 1){
     header("location:HomeYFG.php");
 }  
 else{
-    header("location:index.html");
+    header("location:index.php");
 }
     ?>
 
