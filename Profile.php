@@ -94,7 +94,7 @@
   <footer>  
     <div class="footer">
         <div class="copy">
-          <p>&copy; YourFitnesGuide.com </p>
+          <p>&copy; YourFitnessGuide.com </p>
         </div>
     </div>
   </footer>
