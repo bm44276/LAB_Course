@@ -102,6 +102,8 @@
                 b.style.margin = "10px";
 
                 b.style.backgroundImage = "url('videos/"+PhotoPath+"')";
+                b.style.backroundRepeat = "no-repeat";
+                b.style.backgroundSize = "cover";
                 b.onclick = function(){
                 localStorage.setItem("storageName",VideoPath);
                 location.href = "displayvideo.php";
