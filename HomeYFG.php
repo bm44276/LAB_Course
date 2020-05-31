@@ -37,8 +37,10 @@
                       <a href="costum.html" class="al">Costum</a>
           </div>
             <div class="search">
+              <form action="displaySearchedVideos.php" method="POST">
                  <input type="search" name="search" id="search" placeholder="Search...">
                <button>Search</button>
+               </form>
              </div>
                 <div class="profile">
                     <a href="#" onclick="myFunction()">
@@ -184,7 +186,7 @@
    <?php
        getPaths("LowerBodyDIV","Lower-Body");
        ?>
-  ?>
+  
 
    </div>
  </div>
@@ -198,7 +200,7 @@
     </p>
    <div class="Sector" id="CardioDIV">
    <?php
-    //  getPaths();
+      getPaths('CardioDIV','Cardio');
   ?>
 
    </div>
