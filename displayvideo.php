@@ -25,7 +25,7 @@
             video.controls = true;
             videodiv.style = "border:10px solid black;"
             videodiv.style = "text-align: center;";
-
+            videodiv.style.margin = "50px 0";
             videodiv.appendChild(video);
             document.body.appendChild(videodiv);
 
