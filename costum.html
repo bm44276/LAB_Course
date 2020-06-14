@@ -27,21 +27,29 @@
         </div>
         <hr>
         <div class="inputs">
-            <form action="">
-
-                <input type="text" name="heights" id="heights" placeholder="heights">
-                <br>
-                <input type="text" name="weight" id="weight" placeholder="weight">
-                <br>
-                <select id="goals" name="goals">
-                    <option value="">Goals</option>
-                    <option value="">General</option>
-                    <option value="">Lose Fat</option>
-                    <option value="">Build Muscle</option>
-                    <option value="">Get stronger</option>
-                  </select>
-                  <br>
-                  <button>Save</button>
+            <form action ="">
+                <input type="number" name="heights" id="heights" placeholder="heights">
+                    <br>
+                <input type="number" name="weight" id="weight" placeholder="weight">
+                    <br>
+                <div class = "flex-radio">
+                    <div>
+                        <label for="male">Male</label>
+                            <input type="radio" id="male" name="gender" value="male">
+                    </div>
+                    <br> 
+                    <div>
+                        <label for="female">Female</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="other">Both</label>
+                            <input type="radio" id="other" name="gender" value="other">
+                    </div>
+                </div>
+                    <br>
+                <button>Save</button>
 
             </form>
         </div>
@@ -49,11 +57,9 @@
 
     <footer>
         <div class="footer">
-             
-      
-                <div class="copy">
-                       <p> &copy; YourFitnesGuide.com </p>
-                </div>
+            <div class="copy">
+                <p> &copy; YourFitnesGuide.com </p>
+             </div>
         </div>
       </footer>
 
