@@ -54,10 +54,7 @@
                      <li>
                      <a href="Profile.php" class="styler">Profile</a>
                      </li>
-                          <li>
-                          <a href="#AddWorkOut"  class="styler">AddWorkOut</a>
-                         </li>
-                             <li>
+                         <li>
                              <a href="LogOut.php">Logout</a>
                             </li>
              </ul>
