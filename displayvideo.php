@@ -16,7 +16,7 @@
                   <h1> Your Fitness Guide </h1>
            </div>
     </header>
-
+<main>
         <script>
             var videodiv = document.createElement("div");
             var video = document.createElement("video");
@@ -31,7 +31,7 @@
 
 
          </script>
-
+</main>
 
 
 
