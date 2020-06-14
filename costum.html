@@ -27,12 +27,12 @@
         </div>
         <hr>
         <div class="inputs">
-            <form action ="">
-                <input type="number" name="heights" id="heights" placeholder="heights">
+            <form action ="addCustom.php" method="POST">
+                <input type="number" name="height" id="heights" placeholder="height">
                     <br>
                 <input type="number" name="weight" id="weight" placeholder="weight">
                     <br>
-                <div class = "flex-radio">
+               <!-- <div class = "flex-radio">
                     <div>
                         <label for="male">Male</label>
                             <input type="radio" id="male" name="gender" value="male">
@@ -46,9 +46,17 @@
                     <div>
                         <label for="other">Both</label>
                             <input type="radio" id="other" name="gender" value="other">
-                    </div>
+                    </div>-->
                 </div>
                     <br>
+
+                        <label for="information">Would you like your videos to be male female or both gender related</label>
+                        <select name="gender">
+                            <option value="B">Both</option>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                        </select>
+
                 <button>Save</button>
 
             </form>
@@ -58,7 +66,7 @@
     <footer>
         <div class="footer">
             <div class="copy">
-                <p> &copy; YourFitnesGuide.com </p>
+                <p> &copy; YourFitnessGuide.com </p>
              </div>
         </div>
       </footer>

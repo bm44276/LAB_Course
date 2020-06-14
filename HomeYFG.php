@@ -34,7 +34,7 @@
                          </div>
               </div>
                      <a href="FoodYFG.html" class="btn al" >Food</a>
-                      <a href="costum.html" class="al">Costum</a>
+                      <a href="decideCustom.php" class="al">Costum</a>
           </div>
             <div class="search">
               <form action="displaySearchedVideos.php" method="POST">
