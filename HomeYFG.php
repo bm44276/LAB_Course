@@ -89,16 +89,21 @@
 
   <!--Javcript code to create the buttons and add images and video links when you click them-->
   <script>
-              function SetVideos(section,PhotoPath,VideoPath){
+              function SetVideos(section,PhotoPath,VideoPath,NamePath){
 
                 let a = document.getElementById(section);
                 let diving = document.createElement("div");
                 diving.className = "Item";
-
+                let h2 = document.createElement("h2");
+                h2.innerHTML = NamePath;
+                h2.style.textAlign = "left";
+                h2.style.padding = "5px 10px"
+                h2.style.fontSize = "20px";
+                h2.style.marginLeft = "15px";
                 let b = document.createElement("button");
                 b.style.height = "300px";
                 b.style.width = "400px";
-                b.style.margin = "10px";
+               b.style.margin = "10px 15px";
 
                 b.style.backgroundImage = "url('videos/"+PhotoPath+"')";
                 b.style.backroundRepeat = "no-repeat";
@@ -106,9 +111,11 @@
                 b.style.cursor = "pointer";
                 b.onclick = function(){
                 localStorage.setItem("storageName",VideoPath);
+                localStorage.setItem("storageName1",NamePath);
                 location.href = "displayvideo.php";
                 }
                 diving.appendChild(b);
+                 diving.appendChild(h2);
                 a.appendChild(diving);
 
               }
@@ -128,11 +135,11 @@
 
                $path = "'".$row['FolderName']."/".$row['Video']."/".$row['Photo'].".jpg"."'";
                $path2 = "'".$row['FolderName']."/".$row['Video']."/".$row['Video'].".mp4"."'";
-
+               $path3 =  "'".$row['Video']."'";
         ?>
 
            <script>
-                SetVideos(<?php echo $sectionName;?>,<?php echo $path;?>,<?php echo $path2;?>);
+                SetVideos(<?php echo $sectionName;?>,<?php echo $path;?>,<?php echo $path2;?>, <?php echo $path3;?>);
           </script>
         <?php
          }
@@ -147,7 +154,7 @@
 
   <div class="Items" id= "Full-Body">
 
-<h1 >Full Body</h1>
+<h1>Full Body</h1>
   <div class="Sector" id="FullBodyDIV">
    <?php
       getPaths("FullBodyDIV","Full-Body");
