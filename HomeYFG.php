@@ -52,10 +52,10 @@
                   <a href="#" onclick="secFunction()"><img src="photos/x-button.png" alt="exit" class="exit"></a>
                   </li>
                      <li>
-                     <a href="Profile.php" class="styler">Profile</a>
+                     <a href="Profile.php" class ="alink">Profile</a>
                      </li>
                          <li>
-                             <a href="LogOut.php">Logout</a>
+                             <a href="LogOut.php" class ="alink">Logout</a>
                             </li>
              </ul>
 
@@ -69,18 +69,14 @@
 
   <div class="Home">
      <div class="Titul">
-
      <img src="photos/Capture.PNG" alt="YourFitnesGuide">
-        <h1>
-        Your Fitness Guide
-      </h1>
-
+        <h1>Your Fitness Guide</h1>
      </div>
 
       <p>
         Walking, lifting weights, doing chores – it’s all good. Regardless of what you do, regular exercise and physical activity is the path to health and well-being.
-         Exercise burns fat, builds muscle, lowers cholesterol, eases stress and anxiety, lets us sleep restfully.
-         In this guide, we match resources to your exercise needs at every fitness level.
+        Exercise burns fat, builds muscle, lowers cholesterol, eases stress and anxiety, lets us sleep restfully.
+        In this guide, we match resources to your exercise needs at every fitness level.
       </p>
   </div>
 
@@ -103,7 +99,7 @@
                 let b = document.createElement("button");
                 b.style.height = "300px";
                 b.style.width = "400px";
-               b.style.margin = "10px 15px";
+                b.style.margin = "10px 15px";
 
                 b.style.backgroundImage = "url('videos/"+PhotoPath+"')";
                 b.style.backroundRepeat = "no-repeat";
@@ -115,7 +111,7 @@
                 location.href = "displayvideo.php";
                 }
                 diving.appendChild(b);
-                 diving.appendChild(h2);
+                diving.appendChild(h2);
                 a.appendChild(diving);
 
               }
