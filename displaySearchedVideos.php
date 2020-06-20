@@ -18,12 +18,22 @@
     </header>
 
     <script>
-              function SetVideos(PhotoPath,VideoPath){
+              function SetVideos(PhotoPath,VideoPath,NamePath){
 
                 let a = document.getElementById("Searched-Videos");
                 let diving = document.createElement("div");
                 diving.className = "Item";
-
+                diving.style.display = "flex";
+                diving.style.alignItems = "center";
+                diving.style.borderTop = "1px gray solid";
+                diving.style.padding = "20px 0";
+                let h1 = document.createElement("h1");
+                h1.innerHTML = NamePath;
+                h1.style.textAlign = "left";
+                h1.style.padding = "5px 10px"
+                h1.style.fontSize = "30px";
+                h1.style.marginLeft = "15px";
+  
                 let b = document.createElement("button");
                 b.style.height = "300px";
                 b.style.width = "400px";
@@ -34,9 +44,11 @@
                 b.style.backgroundSize = "cover";
                 b.onclick = function(){
                 localStorage.setItem("storageName",VideoPath);
+                localStorage.setItem("storageName1",NamePath);
                 location.href = "displayvideo.php";
                 }
                 diving.appendChild(b);
+                diving.appendChild(h1);
                 a.appendChild(diving);
 
               }
@@ -56,11 +68,11 @@
 
                $path = "'".$row['FolderName']."/".$row['Video']."/".$row['Photo'].".jpg"."'";
                $path2 = "'".$row['FolderName']."/".$row['Video']."/".$row['Video'].".mp4"."'";
-
+               $path3 =  "'".$row['Video']."'";
         ?>
 
            <script>
-                SetVideos(<?php echo $path;?>,<?php echo $path2;?>);
+                SetVideos(<?php echo $path;?>,<?php echo $path2;?>, <?php echo $path3;?>);
           </script>
         <?php
          }
