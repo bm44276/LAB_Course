@@ -205,7 +205,7 @@ body{
     color: whitesmoke;
     font-weight: bold;
 }
-.profile-items li .styler:hover{
+.profile-items li .alink:hover{
     background-color:   rgb(47, 47, 47);
   }
 .profile .profile-items .exit{
@@ -241,7 +241,7 @@ body{
 /*-------------------------------------------------------------------------------------------------------------*/
 
 .Home{
-    background-image: url(photos/Background1.jpg);
+    background-image: url(photos/wourkout/Background1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10px;
